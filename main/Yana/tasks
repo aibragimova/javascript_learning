@@ -1,0 +1,67 @@
+Write a function that only takes an array of objects and filter out users who are not active
+
+Input example: [ 
+{ name: "Alice", active: true }, 
+{ name: "Bob", active: false }, 
+{ name: "Charlie", active: true }
+ ];
+
+Output: [
+{ name: "Alice", active: true }, 
+{ name: "Charlie", active: true }
+]
+
+      Reduce function:
+Write a function that only takes an array of numbers and calculate the sum of an array using reduce function
+Write a function that takes an array of strings and count the occurrences of each word in an array.
+		
+		Input example : ["apple", "banana", "apple", "cherry", "banana", "apple"];
+		Output example: { apple: 3, banana: 2, cherry: 1 }
+
+Write a function that takes an array of objects and group items by category
+		
+		Input example:
+		 [ 
+{ name: "Shirt", category: "Clothing" }, 
+{ name: "Pants", category: "Clothing" },
+ { name: "Apple", category: "Food" }, 
+{ name: "Banana", category: "Food" }, 
+];
+
+		Output: { 
+  Clothing: [{ name: "Shirt" }, { name: "Pants" }], 
+  Food: [{ name: "Apple" }, { name: "Banana" }], 
+}
+
+Nov 29, 2024 | Tasks preparation for Aliia‌
+
+Write a program to reverse a string
+Write a sum function 
+Write a function to capitalize first letter of each word
+Write a function to sort an array of numbers in ascending order
+Write a function-calculator that supports four operations on two numbers: +, -, = and /
+
+
+ function groupElements(arr) {
+
+     const results = arr.reduce((obj_final, el) => {
+         const isOdd = el % 2 === 0;
+         
+         if (isOdd) {
+            obj_final['odd'].push(el)
+         } else {
+            obj_final['even'].push(el)
+         }
+         
+         return obj_final
+     }, {
+         "odd" : [],
+         "even" : []
+     })
+     
+    
+     return results;
+ }
+ 
+ const numbers = [ 2,356,7]
+ console.log(groupElements(numbers))
