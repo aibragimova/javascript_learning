@@ -129,3 +129,19 @@ console.log(calculator(16, 554, '*')); // 8864
 console.log(calculator(1460, 7, '/')); //  208.57
 console.log(calculator(10, 0, '/')); // Error, not allowded
 console.log(calculator(4, 2, '=')); // Error, invalid operation
+
+// Write a function to filter out even numbers from an array using .filter() array function
+
+function filterNum2(arr){
+    const result2 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            result2.push(arr[i]);
+        }
+    }
+    return result2;
+ }  
+
+const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const result2 = filterNum(numbers2);
+console.log(result2);
