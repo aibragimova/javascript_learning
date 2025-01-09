@@ -1,4 +1,4 @@
-Write a function that only takes an array of objects and filter out users who are not active
+// Write a function that only takes an array of objects and filter out users who are not active
 
 Input example: [ 
 { name: "Alice", active: true }, 
